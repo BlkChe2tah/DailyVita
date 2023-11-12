@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="edge_inset_x_small">2dp</dimen>
+    <dimen name="edge_inset_small">4dp</dimen>
+    <dimen name="edge_inset_medium">8dp</dimen>
+    <dimen name="edge_inset_large">12dp</dimen>
+    <dimen name="edge_inset_x_large">16dp</dimen>
+    <dimen name="edge_inset_xx_large">24dp</dimen>
+    <dimen name="edge_inset_xxx_large">32dp</dimen>
+</resources>

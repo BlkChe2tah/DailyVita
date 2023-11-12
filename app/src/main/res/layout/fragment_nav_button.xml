@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:background="?android:colorBackground"
+    android:paddingVertical="@dimen/edge_inset_x_large"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:text="@string/back"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/edge_inset_xxx_large"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        android:text="@string/next"
+        style="@style/Widget.Material3.Button.AppButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

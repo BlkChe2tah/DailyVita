@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/edge_inset_x_large"
+    tools:context=".presentation.WelcomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.Material3.HeadlineMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_dailyvita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edge_inset_large"
+        android:text="@string/welcome_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="@dimen/edge_inset_xxx_large"
+        android:src="@drawable/welcome"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextAppearance.Material3.BodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edge_inset_large"
+        android:text="@string/welcome_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        style="@style/Widget.Material3.Button.AppButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_started"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

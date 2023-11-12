@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="@dimen/edge_inset_medium"
+    android:layout_width="wrap_content"
+    android:layout_height="48dp">
+
+    <TextView
+        android:id="@+id/itemTextView"
+        tools:text="Sleep"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:textColor="?attr/colorOnSecondary"
+        android:background="@drawable/text_background"
+        android:paddingHorizontal="@dimen/edge_inset_large"
+        android:paddingVertical="@dimen/edge_inset_small"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editText"
+        tools:text="@string/get_vitamin"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

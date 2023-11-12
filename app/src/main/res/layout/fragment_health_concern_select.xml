@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/edge_inset_x_large"
+    tools:context=".presentation.WelcomeFragment">
+
+    <LinearLayout
+        android:id="@+id/contentFrame"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    tools:text="Select the top health concerns.*"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginBottom="@dimen/edge_inset_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGp"
+                    app:singleLine="false"
+                    app:singleSelection="false"
+                    app:selectionRequired="false"
+                    app:chipSpacingVertical="@dimen/edge_inset_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/recyclerTitle"
+                    android:text="@string/prioritize"
+                    android:layout_marginTop="@dimen/edge_inset_x_large"
+                    android:visibility="gone"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginBottom="@dimen/edge_inset_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/btnFrame"
+            layout="@layout/fragment_nav_button"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loadingIndicator"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/edge_inset_medium"
+    app:cardCornerRadius="8dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="?attr/colorOutline"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/edge_inset_medium"
+        android:paddingHorizontal="@dimen/edge_inset_x_large"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/itemTextView"
+            tools:text="Sleep"
+            android:maxLines="1"
+            android:textColor="?attr/colorOnSecondary"
+            android:background="@drawable/text_background"
+            android:paddingHorizontal="@dimen/edge_inset_large"
+            android:paddingVertical="@dimen/edge_inset_medium"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/dragImage"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_menu_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

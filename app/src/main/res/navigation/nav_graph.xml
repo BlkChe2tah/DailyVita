@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/WelcomeFragment"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/WelcomeFragment"
+        android:name="com.example.dailyvita.presentation.WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_WelcomeFragment_to_healthConcernSelectFragment"
+            app:destination="@id/healthConcernSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthConcernSelectFragment"
+        android:name="com.example.dailyvita.presentation.health_concern.HealthConcernSelectFragment"
+        tools:layout="@layout/fragment_health_concern_select"
+        android:label="HealthConcernSelectFragment" >
+        <action
+            android:id="@+id/action_healthConcernSelectFragment_to_dietSelectFragment"
+            app:destination="@id/dietSelectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietSelectFragment"
+        android:name="com.example.dailyvita.presentation.diet.DietSelectFragment"
+        tools:layout="@layout/fragment_diet_select"
+        android:label="DietSelectFragment" >
+        <action
+            android:id="@+id/action_dietSelectFragment_to_addAllergiesFragment"
+            app:destination="@id/addAllergiesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAllergiesFragment"
+        android:name="com.example.dailyvita.presentation.allergy.AddAllergiesFragment"
+        tools:layout="@layout/fragment_add_allergies"
+        android:label="AddAllergiesFragment" >
+        <action
+            android:id="@+id/action_addAllergiesFragment_to_otherInformationFragment"
+            app:destination="@id/otherInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherInformationFragment"
+        tools:layout="@layout/fragment_other_information"
+        android:name="com.example.dailyvita.presentation.other_information.OtherInformationFragment"
+        android:label="OtherInformationFragment" />
+</navigation>

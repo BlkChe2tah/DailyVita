@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Material3.Button.AppButton">
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipStrokeWidth">1.2dp</item>
+        <item name="chipStrokeColor">?attr/colorOutline</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">19dp</item>
+        <item name="chipMinHeight">38dp</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="android:textColor">@color/chip_foreground</item>
+    </style>
+
+    <style name="Widget.App.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CheckBox</item>
+    </style>
+
+    <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CheckBox</item>
+    </style>
+
+    <style name="ThemeOverlay.App.CheckBox" parent="">
+        <item name="colorPrimary">@color/md_theme_light_secondary</item>
+    </style>
+
+</resources>

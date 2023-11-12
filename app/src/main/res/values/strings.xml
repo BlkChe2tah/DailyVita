@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DailyVita</string>
+    <string name="get_started">Get started</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="get_vitamin">Get my personalized vitamin</string>
+    <string name="welcome_to_dailyvita">Welcome to DailyVita</string>
+    <string name="welcome_subtitle">Hello, we are here to make your life healthier and happier</string>
+    <string name="welcome_message">We will ask couple of questions to better understand your vitamin need</string>
+    <string name="select_health_concern">Select the top health concerns.</string>
+    <string name="up_to_5">(up to 5)</string>
+    <string name="prioritize">Prioritize</string>
+    <string name="select_diets">Select the diets you follow.</string>
+    <string name="select_allergies">Write any specific allergies or sensitivity towards specific things. (Optional)</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="_2_5">2 - 5</string>
+    <string name="_0_1">0 - 1</string>
+    <string name="_5">5+</string>
+    <string name="daily_exposure">Is your daily exposure to sun is limited?</string>
+    <string name="do_you_smoke">Do you current smoke (tobacco or marijuana)?</string>
+    <string name="average_alcoholic">On average, how many alcoholic beverages do you have a week?</string>
+</resources>

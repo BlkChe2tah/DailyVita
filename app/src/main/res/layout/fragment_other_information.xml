@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentFrame"
+    android:padding="@dimen/edge_inset_x_large"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    tools:text="Title "
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginBottom="@dimen/edge_inset_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGp"
+                    android:layout_marginBottom="@dimen/edge_inset_x_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/sunYes"
+                        android:text="@string/yes"
+                        style="@style/Widget.App.RadioButton"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/sunNo"
+                        android:text="@string/no"
+                        style="@style/Widget.App.RadioButton"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/title2"
+                    tools:text="Title 2"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginBottom="@dimen/edge_inset_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGp2"
+                    android:layout_marginBottom="@dimen/edge_inset_x_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/smokeYes"
+                        style="@style/Widget.App.RadioButton"
+                        android:text="@string/yes"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/smokeNo"
+                        android:text="@string/no"
+                        style="@style/Widget.App.RadioButton"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/title3"
+                    tools:text="Title 2"
+                    style="@style/TextAppearance.Material3.TitleLarge"
+                    android:layout_marginBottom="@dimen/edge_inset_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGp3"
+                    android:layout_marginBottom="@dimen/edge_inset_x_large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/alcoholic1"
+                        android:text="@string/_0_1"
+                        style="@style/Widget.App.RadioButton"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/alcoholic2"
+                        android:text="@string/_2_5"
+                        tools:checked="true"
+                        style="@style/Widget.App.RadioButton"
+                        android:backgroundTint="?attr/colorSecondary"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/alcoholic3"
+                        android:text="@string/_5"
+                        style="@style/Widget.App.RadioButton"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:background="?android:colorBackground"
+            android:paddingVertical="@dimen/edge_inset_x_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/done"
+                android:text="@string/get_vitamin"
+                style="@style/Widget.Material3.Button.AppButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
