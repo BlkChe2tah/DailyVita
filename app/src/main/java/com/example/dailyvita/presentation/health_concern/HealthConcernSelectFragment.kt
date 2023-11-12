@@ -65,7 +65,7 @@ class HealthConcernSelectFragment : Fragment() {
             Navigation.findNavController(it).popBackStack()
         }
         binding.btnFrame.next.setOnClickListener {
-            mainViewModel.healthConcerns = saveData
+            mainViewModel.setHealthConcerns(saveData)
             Navigation.findNavController(it).navigate(R.id.action_healthConcernSelectFragment_to_dietSelectFragment)
         }
         return binding.root

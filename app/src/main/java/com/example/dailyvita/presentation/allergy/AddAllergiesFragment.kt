@@ -63,7 +63,7 @@ class AddAllergiesFragment : Fragment() {
             Navigation.findNavController(it).popBackStack()
         }
         binding.btnFrame.next.setOnClickListener {
-            mainViewModel.allergies = saveData
+            mainViewModel.setAllergies(saveData)
             Navigation.findNavController(it).navigate(R.id.action_addAllergiesFragment_to_otherInformationFragment)
         }
         return binding.root

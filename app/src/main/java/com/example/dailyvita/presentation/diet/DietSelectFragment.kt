@@ -84,7 +84,7 @@ class DietSelectFragment : Fragment() {
             Navigation.findNavController(it).popBackStack()
         }
         binding.btnFrame.next.setOnClickListener {
-            mainViewModel.diets = saveData
+            mainViewModel.setDiets(saveData)
             Navigation.findNavController(it).navigate(R.id.action_dietSelectFragment_to_addAllergiesFragment)
         }
         return binding.root

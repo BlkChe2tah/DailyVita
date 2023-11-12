@@ -1,8 +1,11 @@
 package com.example.dailyvita.presentation
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import com.example.dailyvita.R
 import com.example.dailyvita.data.data_source.assets.AllergiesDataSource
 import com.example.dailyvita.data.data_source.assets.DietsDataSource
 import com.example.dailyvita.data.data_source.assets.HealthConcernsDataSource
@@ -36,7 +39,16 @@ class MainActivity : AppCompatActivity() {
         ViewModelProvider(this, HealthConcernsSelectViewModelFactory(healthConcernUseCase))[HealthConcernsSelectViewModel::class.java]
         ViewModelProvider(this, DietsSelectViewModelFactory(dietUseCase))[DietSelectViewModel::class.java]
         ViewModelProvider(this, AllergiesSelectViewModelFactory(allergyUseCase))[AllergiesSelectViewModel::class.java]
-        ViewModelProvider(this, MainActivityViewModelFactory())[MainActivityViewModel::class.java]
+        val viewModel = ViewModelProvider(this, MainActivityViewModelFactory())[MainActivityViewModel::class.java]
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        navController.addOnDestinationChangedListener { controller, destination, _ ->
+            binding.progress.visibility = if (destination.id != R.id.WelcomeFragment) View.VISIBLE else View.GONE
+        }
+        viewModel.progress.observe(this){
+            it?.let { value ->
+                binding.progress.setProgress(value, true)
+            }
+        }
     }
 }
 

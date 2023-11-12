@@ -19,16 +19,22 @@ import com.example.dailyvita.utils.UiState
 import com.google.gson.Gson
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 class MainActivityViewModel: ViewModel(){
     var alcholState = 1
-    var healthConcerns: List<HealthConcern> = emptyList()
-    var diets: List<Diet> = emptyList()
-    var allergies: List<Allergy?> = emptyList()
+    private var healthConcerns: List<HealthConcern> = emptyList()
+    private var diets: List<Diet> = emptyList()
+    private var allergies: List<Allergy?> = emptyList()
     var isSmoke = false
     var isDailyExposure = false
 
+    private val _progress = MutableLiveData(0)
+    val progress : LiveData<Int> = _progress
+
+
     fun loadOutput() : String {
+        updateProgress(4.0)
         val data = Output(
             healthConcerns =  healthConcerns.mapIndexed { index, it ->
                 OutputHealthConcern(it.id, it.name, index + 1)
@@ -45,8 +51,30 @@ class MainActivityViewModel: ViewModel(){
                 3 -> "5+";
                 else -> "0-1"
             },
-//            allergies = allergies.map { data -> if (data == null) return  Allergy(0, "") : it }
         )
         return Gson().toJson(data)
+    }
+
+    private fun updateProgress(factor: Double) {
+        val resultProgress = (factor / 4.0) * 100
+        val initValue = progress.value ?: 0
+        if (initValue == 0 || resultProgress > initValue) {
+            _progress.postValue(resultProgress.roundToInt())
+        }
+    }
+
+    fun setHealthConcerns(data: List<HealthConcern>) {
+        updateProgress(1.0)
+        healthConcerns = data
+    }
+
+    fun setDiets(data: List<Diet>) {
+        updateProgress(2.0)
+        diets = data
+    }
+
+    fun setAllergies(data: List<Allergy?>) {
+        updateProgress(3.0)
+        allergies = data
     }
 }
